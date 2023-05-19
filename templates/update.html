@@ -1,0 +1,68 @@
+{% extends "layout.html" %} {% block body %}
+
+<div class="col-md-4 offset-md-4">
+  <div class="card card-body bg-dark text-white">
+    <h1>Edit Task</h1>
+
+    <form action="{{url_for('predios.update', idPredio=predio.idPredio)}}" method="POST">
+      <div class="mb-3">
+        <label for="nombrePropietario">Escriba el nombre del propietario del predio:</label>
+        <input
+          type="text"
+          name="nombrePropietario"
+          value="{{predio.nombrePropietario}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="direccionPredio">Escriba la dirección del predio:</label>
+        <input
+          type="text"
+          name="direccionPredio"
+          value="{{predio.direccionPredio}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="areaPredio">Indique la magnitud del area del predio en metros cuadrados:</label>
+        <input
+          type="text"
+          name="areaPredio"
+          value="{{predio.areaPredio}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="tipoSuelo">Indique el tipo de suelo que presenta el predio:</label>
+        <input
+          type="text"
+          name="tipoSuelo"
+          value="{{predio.tipoSuelo}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="valorPredio">Indique el valor del predio:</label>
+        <input
+          type="text"
+          name="valorPredio"
+          value="{{predio.valorPredio}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="distrito">Escriba el distrito en el que se ubica el predio:</label>
+        <input
+          type="text"
+          name="distrito"
+          value="{{predio.distrito}}"
+          class="form-control bg-dark text-white rounded-0"
+        />
+      </div>
+
+      <button class="btn btn-primary">Actualizar</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

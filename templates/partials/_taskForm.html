@@ -1,0 +1,71 @@
+<form action="/new" method="POST" class="card bg-black text-light" class="row justify-content-center">
+  <div class="row justify-content-center container py-5">
+    <h1 class="h20 mb-7 col-md-15">Agregar Predio</h1>
+
+    <div class="container py-5 form-group col-md-5">
+      <label for="nombrePropietario">Escriba el nombre del propietario del predio:</label>
+      <input
+        type="text"
+        name="nombrePropietario"
+        class="form-control rounded-0 bg-white border-0 text-black"
+        placeholder="Escribir nombrePropietario"
+        autofocus
+      />
+    </div>
+
+    <div class="container py-5 form-group col-md-5 ">
+      <label for="direccionPredio">Escriba la dirección del predio:</label>
+      <input
+        type="text"
+        name="direccionPredio"
+        class="form-control rounded-0 bg-white border-0 text-black"
+        placeholder="Escribir direccionPredio"
+        required
+      />
+    </div>
+    <div class="container py-7 form-group col-md-5">
+      <label for="areaPredio">Indique el area del predio en metros cuadrados:</label>
+      <input
+        type="text"
+        name="areaPredio"
+        class="form-control rounded-0 bg-white border-0 text-black"
+        placeholder="Escribir areaPredio"
+        required
+      />
+    </div>
+    <div class="container py-7 form-group col-md-5">
+      <label for="tipoSuelo">Indique el tipo de suelo que presenta el predio:</label>
+      <input
+        type="text"
+        name="tipoSuelo"
+        class="form-control rounded-0 bg-white border-0 text-black"
+        placeholder="Escribir tipoSuelo"
+        required
+      />
+    </div>
+    <div class="container py-5 form-group col-md-5">
+      <label for="valorPredio">Indique el valor del predio:</label>
+      <input
+        type="text"
+        name="valorPredio"
+        class="form-control rounded-0 bg-white border-0 text-black"
+        placeholder="Escribir valorPredio"
+        required
+      />
+    </div>
+    <div class="container py-5 form-group col-md-5">
+      <label for="distrito">Escriba el distrito en el que se ubica el predio:</label>
+      <input
+        type="text"
+        name="distrito"
+        class="form-control rounded-0 bg-white border-0 text-black"
+        placeholder="Escribir distrito"
+        required
+      />
+    </div>
+
+    <div class="container py-7 form-group col-md-11">
+      <button class="btn btn-primary btn-lg">Registrar</button>
+    </div>
+  </div>
+</form>

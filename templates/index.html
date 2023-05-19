@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  INVENTARIAR PREDIOS - G7 | Home 
+{% endblock %}
+
+{% block body %}
+
+ <!-- FORM -->
+
+    <!-- MESSAGE -->
+    {% include 'partials/_message.html' %}
+
+    <!-- FORM -->
+    {%  include 'partials/_taskForm.html' %}
+  
+
+ <!-- predios list -->
+
+  <div class="col-md-7 container py-5">
+    {% for predio in predios %}
+      <div class="card mb-1 bg-black text-white">
+        <div class="card-body py-2 px-3">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title h6">{{ predio.nombrePropietario}}</h5>
+            <div>
+              <a href="{{ url_for('predios.update', idPredio=predio.idPredio) }}" class="btn btn-primary btn-sm rounded-0">Editar</a>
+              <a href="{{ url_for('predios.delete', idPredio=predio.idPredio) }}" class="btn btn-danger btn-sm rounded-0">Eliminar</a>
+            </div>
+          </div>
+          <p class="card-text">{{ predio.direccionPredio }}</p>
+          <p class="card-text">{{ predio.areaPredio }}</p>
+          <p class="card-text">{{ predio.tipoSuelo }}</p>
+          <p class="card-text">{{ predio.valorPredio }}</p>
+          <p class="card-text">{{ predio.distrito }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+
+{% endblock %} 
+
